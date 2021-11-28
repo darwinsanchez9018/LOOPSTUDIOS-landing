@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
+@import "config/variables";
+@import "base/base";
+@import "mixins/reset-list";
+@import "mixins/breakpoints";
+@import "mixins/hover";
+
+@import "blocks/hero";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/menu";
+@import "blocks/menu-mobile";
+
+@import "blocks/main";
+@import "blocks/section-about";
+@import "blocks/section-creations";
+
+@import "blocks/footer";
+@import "blocks/sitemap";
+@import "blocks/copy";
+

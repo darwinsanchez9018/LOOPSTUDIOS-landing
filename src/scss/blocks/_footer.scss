@@ -1,0 +1,23 @@
+.footer {
+    padding: 3.5rem 1.5rem 2rem 1.5rem;
+    background-color: var(--black-color);
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: left;
+        padding: 3rem 10.6rem 2rem 10.6rem;
+    }
+
+    &__logo {
+        display: block;
+        height: 25px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include tablet {
+            margin-left: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}

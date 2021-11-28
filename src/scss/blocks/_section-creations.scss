@@ -1,0 +1,227 @@
+.creations {
+    margin: 0 1.5rem;
+    text-align: center;
+
+    @include tablet {
+        margin: 0 10.6rem;
+        text-align: left;
+        position: relative;
+        margin-bottom: 12rem;
+    }
+
+    &-title {
+        margin: 0 0 2.5rem 0;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        @include tablet {
+            font-size: 3rem;
+            margin-bottom: 6rem;
+        }
+    }
+
+    &-wrapper {
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+    }
+
+    &-gallery1 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-deep-earth.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-deep-earth.jpg");
+            }
+        }
+    }
+
+    &-gallery2 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-night-arcade.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-night-arcade.jpg");
+            }
+        }
+    }
+
+    &-gallery3 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-soccer-team.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-soccer-team.jpg");
+            }
+        }
+    }
+
+    &-gallery4 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-grid.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-grid.jpg");
+            }
+        }
+    }
+
+    &-gallery5 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-from-above.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-from-above.jpg");
+            }
+        }
+    }
+
+    &-gallery6 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-pocket-borealis.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-pocket-borealis.jpg");
+            }
+        }
+    }
+
+    &-gallery7 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-curiosity.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-curiosity.jpg");
+            }
+        }
+    }
+
+    &-gallery8 {
+        &-img {
+            background-image: url("../assets/images/mobile/image-fisheye.jpg");
+            @include tablet {
+                background-image: url("../assets/images/desktop/image-fisheye.jpg");
+            }
+        }
+    }
+
+
+// Estilos generales para todas las Gelerías
+    &-gallery1,
+    &-gallery2,
+    &-gallery3,
+    &-gallery4,
+    &-gallery5,
+    &-gallery6,
+    &-gallery7,
+    &-gallery8 {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right,  rgba(0, 0, 0, .5), rgba(250, 250, 250, .0)) ;
+            background-blend-mode: multiply;
+
+            @include tablet {
+                background-image: linear-gradient(to top,  rgba(0, 0, 0, .5), rgba(250, 250, 250, .0)) ;
+            }
+        }
+
+        &::after {
+            @include tablet {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--gray-color);
+                opacity: 0%;
+                filter: brightness(150%);
+                transition: all .4s;
+                z-index: 1;
+            }
+            
+        }
+
+        @include hover {
+            &::after {
+                opacity: 70%;
+                cursor: pointer;
+            }
+
+            
+        }
+
+
+        &-img {
+            height: 33vmin;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 1.5rem;
+
+            @include tablet {
+                height: 55.5vmin;
+                margin-bottom: 0;
+            }
+        }
+
+        &-text {
+            margin: 0 0 1rem 1rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: left;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: var(--white-color);
+            max-width: 130px;
+
+            @include tablet {
+                margin: 0 0 2rem 2.5rem;
+                font-size: 2rem;
+                max-width: 170px;
+                z-index: 2;
+            }
+
+            @include hover {
+                color: var(--black-color);
+                cursor: pointer;
+    
+                &::after {
+                    opacity: 70%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &-cta {
+        position: relative;
+        top: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: var(--menu-font);
+        font-size: .9rem;
+        font-weight: 400;
+        letter-spacing: .3rem;
+        color: var(--black-color);
+        border: 2px solid var(--black-color);
+        padding: .5rem 2.5rem;
+
+        @include tablet {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1rem;
+            padding: 1rem 3rem;
+        }
+
+        @include hover {
+            background-color: var(--black-color);
+            color: var(--white-color);
+            transition: all .5s;
+        }
+    }
+}
